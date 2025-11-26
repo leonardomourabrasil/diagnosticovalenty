@@ -10,11 +10,12 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center h-full overflow-hidden flex-1 min-w-0 max-w-[70%] sm:w-[400px] md:w-[600px] lg:w-[720px] sm:max-w-[80%]">
           <img
-            src="/valenty-logo.png"
+            src="/header-logo.png"
             alt="Valenty"
-            className="h-[288px] w-auto cursor-pointer"
+            className="h-full w-full sm:w-auto object-contain object-left cursor-pointer scale-[2.6] sm:scale-[3.8] origin-left"
+            onError={(e) => { e.currentTarget.src = '/valenty-logo.png'; }}
             onClick={() => {
               try {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
