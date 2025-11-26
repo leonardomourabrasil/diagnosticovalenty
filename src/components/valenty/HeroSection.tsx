@@ -18,7 +18,23 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen bg-valenty-navy flex items-center justify-center px-4 pt-20 lg:pt-[170px] relative">
-      <div className="container mx-auto text-center max-w-5xl py-20">
+      {/* Vídeo de fundo em loop com overlay azul translúcido */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        autoPlay
+        muted
+        playsInline
+        loop
+        aria-hidden="true"
+      >
+        <source src="/hero.webm" type="video/webm" />
+        <source src="/hero_opt.mp4" type="video/mp4" />
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+      {/* Overlay na mesma cor azul com transparência por cima do vídeo */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-valenty-navy/100 via-valenty-navy/90 to-valenty-navy/80" />
+
+      <div className="container mx-auto text-center max-w-5xl py-20 relative z-20">
         {/* Selo acima do título com transparência */}
         <Reveal>
           <div className="inline-flex items-center px-5 py-2 md:px-6 md:py-2.5 rounded-full border border-accent/50 bg-accent/20 text-white text-sm md:text-base font-semibold tracking-wide mb-6 shadow-sm backdrop-blur-sm">
@@ -60,7 +76,7 @@ export const HeroSection = () => {
         type="button"
         aria-label="Rolar para baixo"
         onClick={scrollDown}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 hover:text-white focus:outline-none motion-safe:animate-pulse"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/80 hover:text-white focus:outline-none motion-safe:animate-pulse z-20"
       >
         <ArrowDown className="w-8 h-8" />
       </button>

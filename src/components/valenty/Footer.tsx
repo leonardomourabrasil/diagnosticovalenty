@@ -13,7 +13,7 @@ export const Footer = () => {
                 <img
                   src="/footer-logo.png"
                   alt="Valenty"
-            className="h-[60px] w-auto object-contain"
+            className="h-[60px] w-auto object-contain mx-auto md:mx-0"
                   loading="lazy"
                   decoding="async"
                   onError={(e) => { e.currentTarget.src = '/valenty-logo.png'; }}
@@ -21,12 +21,12 @@ export const Footer = () => {
               </div>
             </Reveal>
             <Reveal delay={80}>
-              <p className="text-white/80 text-sm md:text-base max-w-md">
+              <p className="text-white/80 text-sm md:text-base max-w-md text-center md:text-left mx-auto md:mx-0">
                 Transformando pessoas e organizações através da Aprendizagem Humanativa.
               </p>
             </Reveal>
             <Reveal delay={140}>
-              <div className="flex items-center gap-3 mt-6">
+              <div className="flex items-center gap-3 mt-6 justify-center md:justify-start">
                 {[
                   { Icon: Instagram, href: "https://www.instagram.com/valentyschool/", label: "Instagram" },
                   { Icon: Linkedin, href: "https://www.linkedin.com/company/valentyschool/?viewAsMember=true", label: "LinkedIn" },
@@ -50,9 +50,9 @@ export const Footer = () => {
           {/* Coluna: Contato */}
           <div>
             <Reveal>
-              <h4 className="text-white text-lg md:text-xl font-semibold mb-4 text-right">Contato</h4>
+              <h4 className="text-white text-lg md:text-xl font-semibold mb-4 text-center md:text-right">Contato</h4>
             </Reveal>
-            <div className="flex flex-col items-end space-y-3 text-white/90">
+            <div className="flex flex-col items-center md:items-end space-y-3 text-white/90">
               <Reveal delay={80}>
                 <a href="mailto:oi@valenty.com.br" className="flex items-center gap-3 hover:text-accent transition-colors">
                   <Mail className="w-4 h-4 text-accent" />

@@ -12,12 +12,9 @@ export const Header = () => {
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="https://drive.google.com/uc?export=view&id=1-fUIyf_1fNi70KyIg8WwjrWdGi43xq_a"
+            src="/valenty-logo.png"
             alt="Valenty"
-            className="h-40 sm:h-16 md:h-16 lg:h-[250px] xl:h-[250px] 2xl:h-[250px] w-auto cursor-pointer"
-            loading="lazy"
-            decoding="async"
-            onError={(e) => { e.currentTarget.src = '/valenty-logo.png'; }}
+            className="h-[288px] w-auto cursor-pointer"
             onClick={() => {
               try {
                 window.scrollTo({ top: 0, behavior: 'smooth' });

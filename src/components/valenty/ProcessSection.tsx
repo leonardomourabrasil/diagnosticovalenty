@@ -46,18 +46,18 @@ export const ProcessSection = () => {
               <Reveal key={index} delay={index * 150}>
                 <div className="relative group">
                   <div className="flex flex-col items-center text-center">
-                    {/* Number badge with shadow and hover effect */}
-                    <div className="bg-accent text-accent-foreground w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-6 relative z-10 shadow-lg transition-transform duration-300 group-hover:scale-105">
+                    {/* Number badge with shadow and hover effect (smaller on mobile) */}
+                    <div className="bg-accent text-accent-foreground w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl font-bold mb-4 md:mb-6 relative z-10 shadow-lg transition-transform duration-300 group-hover:scale-105">
                       {step.number}
                     </div>
                     
-                    {/* Icon container with better styling */}
-                    <div className="bg-secondary/80 p-6 rounded-2xl mb-5 w-24 h-24 flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:bg-secondary">
-                      <step.icon className="w-12 h-12 text-accent transition-transform duration-300 group-hover:scale-105" strokeWidth={2.5} />
+                    {/* Icon container with better styling (reduced size on mobile) */}
+                    <div className="bg-secondary/80 p-4 md:p-6 rounded-2xl mb-4 md:mb-5 w-20 h-20 md:w-24 md:h-24 flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:bg-secondary">
+                      <step.icon className="w-8 h-8 md:w-12 md:h-12 text-accent transition-transform duration-300 group-hover:scale-105" strokeWidth={2.5} />
                     </div>
                     
-                    {/* Title with better typography */}
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 text-primary tracking-tight">
+                    {/* Title with better typography (slightly smaller on mobile) */}
+                    <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 text-primary tracking-tight">
                       {step.title}
                     </h3>
                     

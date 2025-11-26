@@ -27,7 +27,7 @@ export const CTASection = () => {
             
             <Button 
               size="lg"
-              className="bg-accent hover:bg-valenty-green-hover text-accent-foreground font-bold uppercase tracking-wide w-full md:w-auto max-w-md mx-auto text-base sm:text-lg md:text-xl px-6 md:px-12 py-4 md:py-6"
+              className="bg-accent hover:bg-valenty-green-hover text-accent-foreground font-bold uppercase tracking-wide w-full md:w-auto max-w-md mx-auto text-xs sm:text-sm md:text-xl px-6 md:px-12 py-4 md:py-6"
               onClick={() => {
                 console.log('Calendly click', { source: 'cta', ts: Date.now() });
                 window.open(buildCalendlyUrl('cta'), '_blank', 'noopener,noreferrer');
